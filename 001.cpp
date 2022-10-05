@@ -16,7 +16,7 @@ int mencari_V0(int variabel1, int variabel2)
     /* Tulis fungsi mencari v0 kalian disini */
     int v0;
     // jarak ketinggian
-    v0 = variabel1 ^ 2 x asin(2 * SUDUT) / GRAVITASI;
+    v0 = speed_dgn_loss(variabel1) ^ 2 x asin(2 * SUDUT) / GRAVITASI;
 
     return v0;
 }
