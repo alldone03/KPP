@@ -15,15 +15,16 @@ int mencari_V0(int variabel1, int variabel2)
 {
     /* Tulis fungsi mencari v0 kalian disini */
     int v0;
-    X = (Vo2 * asin() 2 * (variabel1)) / GRAVITASI;
+    // jarak ketinggian
+    v0 = variabel1 ^ 2 x asin(2 * SUDUT) / GRAVITASI;
 
-    return 0;
+    return v0;
 }
 
 int speed_dgn_loss(int variabel1)
 {
     /* tulis fungsi hitung_loss kalian disini */
-    int data;
+
     int loses;
     if (variabel1 >= 1 && variabel1 <= 10)
     {
@@ -41,10 +42,7 @@ int speed_dgn_loss(int variabel1)
     {
         return 0;
     }
-
-    // float v0 = (2 * variabel1 / variabel2) ^ 0, 5;60
-
-    return loses;
+    return variabel1 - loses;
 }
 
 int main()
