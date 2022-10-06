@@ -1,3 +1,2 @@
-    // loses = (data > 1 && data < 10) ? 1 : loses;
-    // loses = (data > 10 && data < 20) ? 3 : loses;
-    // loses = (data > 21 && data < 30) ? 5 : loses;
+    // printf("%f\n", pow(speed_dgn_loss(variabel1), 2));
+    // printf("%f\n", sin(2 * double(SUDUT)));
