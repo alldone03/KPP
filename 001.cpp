@@ -46,6 +46,7 @@ int main()
 {
     /* tulis kode utama kalian disini */
     double input;
+    cout << "Insert Input: ";
     cin >> input;
     cout << to_string(mencari_V0(input)) << " ";
     cout << setprecision(6) << mencari_tangesial(input) << endl;
