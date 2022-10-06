@@ -11,20 +11,9 @@ using namespace std;
 #define START_PENGUKURAN 1 // pengukuran dimulai dari 1 meter
 #define SUDUT 45           // sudut elevasi tembakan
 
-int mencari_V0(int variabel1, int variabel2)
-{
-    /* Tulis fungsi mencari v0 kalian disini */
-    int v0;
-    // jarak ketinggian
-    v0 = speed_dgn_loss(variabel1) ^ 2 x asin(2 * SUDUT) / GRAVITASI;
-
-    return v0;
-}
-
 int speed_dgn_loss(int variabel1)
 {
     /* tulis fungsi hitung_loss kalian disini */
-
     int loses;
     if (variabel1 >= 1 && variabel1 <= 10)
     {
@@ -42,17 +31,32 @@ int speed_dgn_loss(int variabel1)
     {
         return 0;
     }
+
     return variabel1 - loses;
+}
+unsigned int mencari_V0(int variabel1)
+{
+    //, int variabel2
+    // v1 = memasukan persamaan ketika kecepatan
+    // v2 = waktu berapa
+
+    /* Tulis fungsi mencari v0 kalian disini */
+    int v0;
+    // jarak ketinggian
+    v0 = pow(speed_dgn_loss(variabel1), 2) * asin(2 * SUDUT) / GRAVITASI;
+    return v0;
 }
 
 int main()
 {
     /* tulis kode utama kalian disini */
+
     int sudut_tembakan;
-    cout << "Sudut Tembakan" << endl;
+    cout << "Sudut Tembakan :";
     cin >> sudut_tembakan;
-    string datahello = "Sudut Tembakan Adalah " + to_string(sudut_tembakan);
-    cout << datahello << endl;
+    // string datahello = "Sudut Tembakan Adalah " + to_string(sudut_tembakan);
+    cout << "Sudut Tembakan Adalah " + to_string(mencari_V0(sudut_tembakan)) << endl;
+
     return 0;
 
     /* cout << jarak << " " << kecepatan_tangensial << endl */
