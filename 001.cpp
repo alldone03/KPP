@@ -75,7 +75,7 @@ int main()
     //     printf("oke");
     // }
     // printf("%f\n", speed_dgn_loss(input));
-    cout << "INPUT : \n";
+    cout << "INPUT : ";
     cin >> input;
     // cout << speed_dgn_loss(input) << "\n";
     cout << "Jarak Adalah : " + to_string(mencari_V0(input)) << endl;
