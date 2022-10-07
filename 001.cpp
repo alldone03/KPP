@@ -6,7 +6,7 @@
     Please Start With Commandline Windows
 -------------------------------------------
 */
-
+#define _USE_MATH_DEFINES
 #include <iomanip>
 #include <iostream>
 #include <cmath>
@@ -23,7 +23,7 @@ using namespace std;
 int data_jarak[3][3] = {{1, 10, 1}, {11, 20, 3}, {21, 30, 5}};
 int kegagalan;
 
-float speed_dgn_loss(float data)
+int speed_dgn_loss(float data)
 {
     /* tulis fungsi hitung_loss kalian disini */
 
@@ -37,13 +37,13 @@ float speed_dgn_loss(float data)
     {
         kegagalan = (data >= data_jarak[i][0] && data <= data_jarak[i][1]) ? data_jarak[i][2] : kegagalan;
     }
-
-    return data - kegagalan;
+    // printf("%i", int(data) - kegagalan);
+    return int(data) - kegagalan;
 }
 
 int mencari_V0(float variabel1)
 {
-    return pow(speed_dgn_loss(variabel1), 2) * sin(2 * double(SUDUT)) / double(GRAVITASI) + 7;
+    return pow(speed_dgn_loss(variabel1), 2) * sin(int(2 * int(SUDUT)) * M_PI / 180.0) / int(GRAVITASI);
 }
 float mencari_tangesial(float variable)
 {
@@ -56,7 +56,6 @@ int main()
     float input;
     // cout << "Insert Input: ";
     cin >> input;
-
     if (input > 30)
     {
     inputagain:
@@ -68,7 +67,7 @@ int main()
         }
     }
     // cout << speed_dgn_loss(input);
-    cout << to_string(mencari_V0(input)) << " ";
+    cout << mencari_V0(input) << " ";
     cout << setprecision(6) << mencari_tangesial(input) << endl;
     /* cout << jarak << " " << kecepatan_tangensial << endl */
     return 0;
